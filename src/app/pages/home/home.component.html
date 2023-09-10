@@ -1,5 +1,5 @@
-<div *ngIf="loading == false"  class="grid min-h-[100% - 40px] dark:bg-gray-700 grid-cols-2 p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    <div *ngFor="let photo of data" class="relative group " >
+<div *ngIf="loading == false"  class="grid min-h-[100% - 40px] dark:bg-gray-700 grid-cols-2 p-2 mt-5 sm:mt-0 sm:p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div *ngFor="let photo of data" class="relative group min-h-[200px] max-h-[300px] md:max-h-[500px]" >
         <div class="absolute justify-between px-4 place-items-center  w-full  flex   duration-300  bottom-4 z-10 md:opacity-0 md:group-hover:opacity-100">
             <h1 class="text-white text-[10px] md:text-auto font-black flex place-content-center place-items-center">
                 <img class="hidden md:block -3 h-3 md:w-8 md:h-8 rounded mr-2" [src]="'https://ui-avatars.com/api/?background='+photo.avg_color.substr(1)+'&color=fff&name='+photo.photographer" [alt]="photo.photographer">{{photo.photographer}}
@@ -10,8 +10,8 @@
                 </svg>
             </a>    
         </div>
-        <img [src]="photo.src.large" [alt]="photo.alt" class="w-full z-[5] md:group-hover:brightness-50 duration-300 cursor-pointer object-cover h-full">
-        <div class=" min-h-[400px] w-full bg-slate-200 absolute animate-pulse -z-10 top-0 left-0"></div>
+        <img [src]="photo.src.large" [alt]="photo.alt" class="w-full min-h-[200px] z-[5] md:group-hover:brightness-50 duration-300 cursor-pointer object-cover h-full">
+        <div class="min-h-[200px] max-h-[300px] md:max-h-[500px] w-full bg-slate-200 absolute animate-pulse -z-10 top-0 left-0"></div>
     </div>
 </div>
 
