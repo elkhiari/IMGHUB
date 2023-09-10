@@ -1,11 +1,11 @@
 <div *ngIf="loading == false"  class="grid min-h-[100% - 40px] dark:bg-gray-700 grid-cols-2 p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <div *ngFor="let photo of data" class="relative group " >
         <div class="absolute justify-between px-4 place-items-center  w-full  flex   duration-300  bottom-4 z-10 md:opacity-0 md:group-hover:opacity-100">
-            <h1 class="text-white text-sm md:text-auto font-black flex place-content-center place-items-center">
-                <img class="w-8 h-8 rounded mr-2" [src]="'https://ui-avatars.com/api/?background='+photo.avg_color.substr(1)+'&color=fff&name='+photo.photographer" [alt]="photo.photographer">{{photo.photographer}}
+            <h1 class="text-white text-[10px] md:text-auto font-black flex place-content-center place-items-center">
+                <img class="w-3 h-3 md:w-8 md:h-8 rounded mr-2" [src]="'https://ui-avatars.com/api/?background='+photo.avg_color.substr(1)+'&color=fff&name='+photo.photographer" [alt]="photo.photographer">{{photo.photographer}}
             </h1>
             <a class="rounded bg-white p-2 " [href]="photo.src.original+'?cs=srgb&amp;dl=elkhiari-'+photo.id+'.jpg&amp;fm=jpg'" download="">
-                <svg class="w-6 h-6  text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                <svg class="w-3 h-3 md:w-6 md:h-6  text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
                 </svg>
             </a>    
