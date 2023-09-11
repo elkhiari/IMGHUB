@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SourceComponent } from './pages/source/source.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SourceComponent } from './pages/source/source.component';
     LogoComponent,
     SearchBarComponent,
     SourceComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

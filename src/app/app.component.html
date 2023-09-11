@@ -1,6 +1,8 @@
-<app-navbar></app-navbar>
+<div class="min-h-screen ">
+    <app-navbar></app-navbar>
 <app-loading [loading]="getLoading()"></app-loading>
 <router-outlet></router-outlet>
-<div  *ngIf="!getLoading()" class="delay-1000 transition-opacity">
+<div  *ngIf="!getLoading()" class="delay-1000 transition-opacity  sticky left-0 top-full">
     <app-footer [loading]="getLoading()"></app-footer>
+</div>
 </div>
