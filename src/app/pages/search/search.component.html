@@ -1,4 +1,7 @@
 <div class="min-h-[66vh]">
+    <div *ngIf="!getLoading() && !error && text" class="font-black px-10 py-3 text-lg md:text-4xl">
+        {{toCapitalize(text)}} images
+    </div>
     <app-grid [photos]="photos"></app-grid>
     <div *ngIf="error" class="max-w-3xl flex flex-col   p-4">
         <div class="font-bold text-lg md:text-2xl">

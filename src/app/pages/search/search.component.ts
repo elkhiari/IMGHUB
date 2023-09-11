@@ -46,4 +46,8 @@ export class SearchComponent implements OnInit {
     this.LoadingService.setLoading(loading)
   } 
 
+  toCapitalize (text : string): string {
+    if(!text) return ''
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
 }

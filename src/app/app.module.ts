@@ -13,6 +13,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SourceComponent } from './pages/source/source.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     FooterComponent,
     LogoComponent,
     SearchBarComponent,
+    SourceComponent,
   ],
   imports: [
     BrowserModule,
