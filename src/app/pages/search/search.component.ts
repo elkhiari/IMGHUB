@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
   constructor(private route: ActivatedRoute,private http:HttpClient,private LoadingService : LoadingService) {}
 
   text : string | null = this.route.snapshot.paramMap.get('id');
-  photos : Photo[] | undefined;
+  photos : Photo[] = [];
   error : string = "";
 
   ngOnInit(): void {
@@ -31,11 +31,11 @@ export class SearchComponent implements OnInit {
       this.photos = response.photos
       if (response.photos.length === 0) 
         this.error = "Oops! Something went wrong. We couldn't find any results for your query. Please try a different search term or check your spelling."
-     
+      this.setLoading(false); 
     },(error : any)=>{
       this.error = "Oops! Something went wrong. We couldn't find any results for your query. Please try a different search term or check your spelling." 
+      this.setLoading(false); 
     })
-    this.setLoading(false); 
   }
 
   getLoading() {

@@ -1,7 +1,17 @@
 <div class="min-h-[66vh]">
     <app-grid [photos]="photos"></app-grid>
-    <div *ngIf="error">
-        {{error}}
+    <div *ngIf="error" class="max-w-3xl flex flex-col   p-4">
+        <div class="font-bold text-lg md:text-2xl">
+            {{error}}
+        </div>
+        <a routerLink="" class="p-4 group mt-4 border border-black font-black flex bg-black text-white hover:bg-white duration-300 place-items-center hover:text-gray-800 rounded">
+            Return to the main page
+            <svg class="w-6 h-6 ml-4 group-hover:ml-12 duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
     </div>
-    <app-pagination [loading]="getLoading()" (getData)="getData($event)"></app-pagination>
+    <div *ngIf="photos.length != 0">
+        <app-pagination [loading]="getLoading()" (getData)="getData($event)"></app-pagination>
+    </div>
 </div>
