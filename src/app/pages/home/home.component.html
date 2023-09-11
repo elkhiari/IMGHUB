@@ -1,4 +1,6 @@
-<app-search-bar></app-search-bar>
+<div *ngIf="!getLoading()">
+    <app-search-bar></app-search-bar>
+</div>
 <app-grid [photos]="data"></app-grid>
 <app-pagination [loading]="getLoading()" (getData)="getData($event)"></app-pagination>
 
