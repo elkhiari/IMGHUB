@@ -1,11 +1,21 @@
-<div  class="flex sticky bg-white/50  top-0 md:top-5 duration-300 text-gray-900 z-50 container max-w-3xl  mx-auto  justify-between place-items-center p-6 md:rounded-xl  backdrop-blur-sm">
+<div class="md:flex sticky bg-white/50 top-0 md:top-5 duration-300 text-gray-900 z-50 container  mx-auto justify-between place-items-center p-6 md:rounded-xl backdrop-blur-sm">
+    <div class="flex place-content-center justify-between">
     <app-logo></app-logo>
-    <ul class="flex place-content-center place-items-center space-x-10 font-bold">
-        <li >
-            <a class="p-2  duration-300 relative after:w-0 hover:after:w-full after:duration-300 after:absolute after:h-1 after:left-0 after:bg-gray-600 after:rounded-full after:bottom-0 " routerLink="">Home</a>
+    <button class="block md:hidden" (click)="toggleOpen()">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    </div>
+    <ul class="px-4 {{isOpen?'':'hidden'}} duration-300 transition-opacity md:flex place-items-center justify-end md:space-x-10 font-bold space-y-6 md:space-y-0 w-full t flex-col md:flex-row  mt-5 md:mt-0 left-0 top-full md:top-0 md:left-auto">
+        <li class="flex md:text-center md:w-auto w-full">
+            <a (click)="toggleOpen()" class="w-full duration-300 relative  p-2 after:w-0 hover:after:w-full after:duration-300 after:absolute after:h-1 after:left-0 after:bg-gray-600 after:rounded-full after:bottom-0 " routerLink="">Home</a>
         </li>
-        <!-- <li >
-            <a class="p-2  duration-300 relative after:w-0 hover:after:w-full after:duration-300 after:absolute after:h-1 after:left-0 after:bg-gray-600 after:rounded-full after:bottom-0 " routerLink="search">Search</a>
-        </li> -->
+        <li class="flex md:text-center md:w-auto w-full ">
+            <a (click)="toggleOpen()" class="w-full duration-300 relative  p-2 after:w-0 hover:after:w-full after:duration-300 after:absolute after:h-1 after:left-0 after:bg-gray-600 after:rounded-full after:bottom-0 " routerLink="about">About us</a>
+        </li>
+        <li class="flex md:text-center md:w-auto w-full">
+            <a (click)="toggleOpen()" class="w-full duration-300 relative  p-2 after:w-0 hover:after:w-full after:duration-300 after:absolute after:h-1 after:left-0 after:bg-gray-600 after:rounded-full after:bottom-0 " routerLink="source">Source</a>
+        </li>
     </ul>
 </div>
