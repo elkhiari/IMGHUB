@@ -7,6 +7,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { GridComponent } from './components/grid/grid.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +20,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
+    GridComponent,
+    LoadingComponent,
+    PaginationComponent,
+    FooterComponent,
+    LogoComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

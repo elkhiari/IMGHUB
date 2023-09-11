@@ -1,3 +1,7 @@
-<div>
-    Search
+<div class="min-h-[66vh]">
+    <app-grid [photos]="photos"></app-grid>
+    <div *ngIf="error">
+        {{error}}
+    </div>
+    <app-pagination [loading]="getLoading()" (getData)="getData($event)"></app-pagination>
 </div>

@@ -1,0 +1,36 @@
+<div class="w-full p-4 mx-auto  mt-10">
+    <div class="max-w-2xl mx-auto flex bg-slate-100 p-1 px-3 rounded-t">
+        <input #text  type="text" class="p-2 font-bold  w-full bg-transparent" placeholder="e.g., Nature, Football, Car...">
+        <button (click)="search(text.value)">
+            <svg class="w-6 h-6 text-gray-500 hover:scale-105 duration-300 hover:text-gray-600 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 15.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Zm11.707 2.793-4-4a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414-1.414Z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="max-w-2xl mx-auto place-content-center p-4 rounded-b place-items-center bg-white flex flex-wrap gap-4">
+        <div (click)="search('car')" class="bg-slate-200/50 border hover:border-black flex place-content-center place-items-center p-4 rounded cursor-pointer hover:bg-slate-200 duration-300">
+            Car
+            <svg class="w-4 ml-2 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+        <div (click)="search('football')" class="bg-slate-200/50 border hover:border-black flex place-content-center place-items-center p-4 rounded cursor-pointer hover:bg-slate-200 duration-300">
+            Football
+            <svg class="w-4 ml-2 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+        <div (click)="search('nature')" class="bg-slate-200/50 border hover:border-black flex place-content-center place-items-center p-4 rounded cursor-pointer hover:bg-slate-200 duration-300">
+            Natue
+            <svg class="w-4 ml-2 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+        <div (click)="search('Morocco')" class="bg-slate-200/50 border hover:border-black flex place-content-center place-items-center p-4 rounded cursor-pointer hover:bg-slate-200 duration-300">
+            Morocco
+            <svg class="w-4 ml-2 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+    </div>
+</div>
